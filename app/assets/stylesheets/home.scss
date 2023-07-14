@@ -36,7 +36,11 @@
         margin: 20px 0;
 
         .header-btn {
-            width: 30%;
+            text-decoration: none;
+            color: #121212;
+            background-color: lightgrey;
+            padding: 0 40px;
+            text-align: center;
             border-radius: 4px;
             transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 
