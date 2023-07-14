@@ -1,7 +1,11 @@
 
 <div class='nav-container'>
     <div class='nav-header'>
-        <p>something here</p>
+        <% if current_user %>
+            <p><%= current_user.username %></p>
+        <% else %>
+            <p>Guest</p>
+        <% end %>
     </div>
 
     <div class='nav-links'>
@@ -12,8 +16,9 @@
     </div>
 
     <div class="auth-links">
-        <% if logged_in?(:user, :site_admin) %>
-            <%= button_to 'Logout', destroy_user_session_path, method: :destroy, class: 'nav-item' %>
+        <% if current_user %>
+            <%= button_to 'Logout', destroy_user_session_path, method: :destroy, class: 'nav-item logout-btn' %>
+            <%= link_to 'Edit Profile', edit_user_registration_path, class: 'nav-item' %>
         <% else %>
             <%= link_to 'Login', new_user_session_path, class: 'nav-item' %>
             <%= link_to 'Sign Up', new_user_registration_path, class: 'nav-item' %>
