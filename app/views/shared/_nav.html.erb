@@ -1,6 +1,17 @@
 
 <div class='nav-container'>
-    <%= link_to 'Home', root_path, class: 'nav-item' %>
-    <%= link_to 'About', about_path, class: 'nav-item' %>
-    <%= link_to 'Contact', contact_path, class: 'nav-item' %>
+    <div class='nav-header'>
+        <p>something here</p>
+    </div>
+
+    <div class='nav-links'>
+        <%= link_to 'Home', root_path, class: 'nav-item' %>
+        <%= link_to 'About', about_path, class: 'nav-item' %>
+        <%= link_to 'Contact', contact_path, class: 'nav-item' %>
+        <%= link_to 'Blogs', blogs_path, class: 'nav-item' %>
+    </div>
+
+    <div class="auth-links">
+        <p>auth links</p>
+    </div>
 </div>

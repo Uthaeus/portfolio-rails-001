@@ -1,0 +1,17 @@
+
+.nav-container {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #504f4f;
+    padding: 0 20px;
+
+    .nav-item {
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 0 10px;
+    }
+}
