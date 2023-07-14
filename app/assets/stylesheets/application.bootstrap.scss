@@ -1,2 +1,22 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+.home-container {
+    height: calc(100vh - 56px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+
+    .home-header {
+        width: 40%;
+        height: 200px;
+        background-color: 'grey';
+
+        .home-header-title {
+            font-size: 2em;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+}
