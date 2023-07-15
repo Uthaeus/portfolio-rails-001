@@ -1,0 +1,27 @@
+
+<div class='blog-nav-container'>
+    <div class='blog-nav-header'>
+        <% if current_user %>
+            <%= link_to "#{current_user.username}", edit_user_registration_path, class: 'nav-header-title' %>
+        <% else %>
+            <%= link_to 'Guest', new_user_registration_path, class: 'nav-header-title' %>
+        <% end %>
+    </div>
+
+    <div class='blog-nav-links'>
+        <%= link_to 'Home', root_path, class: 'blog-nav-item' %>
+        <%= link_to 'About', about_path, class: 'blog-nav-item' %>
+        <%= link_to 'Contact', contact_path, class: 'blog-nav-item' %>
+        <%= link_to 'Blogs', blogs_path, class: 'blog-nav-item' %>
+    </div>
+
+    <div class='blog-nav-auth'>
+        <% if current_user %>
+            <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'blog-nav-item logout-btn' %>
+            <%= link_to 'Edit Profile', edit_user_registration_path, class: 'blog-nav-item' %>
+        <% else %>
+            <%= link_to 'Login', new_user_session_path, class: 'blog-nav-item' %>
+            <%= link_to 'Sign Up', new_user_registration_path, class: 'blog-nav-item' %>
+        <% end %>
+    </div>
+</div>
