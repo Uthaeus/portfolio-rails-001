@@ -17,7 +17,7 @@
 
     <div class="auth-links">
         <% if current_user %>
-            <%= button_to 'Logout', destroy_user_session_path, method: :destroy, class: 'nav-item logout-btn' %>
+            <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-item logout-btn' %>
             <%= link_to 'Edit Profile', edit_user_registration_path, class: 'nav-item' %>
         <% else %>
             <%= link_to 'Login', new_user_session_path, class: 'nav-item' %>

@@ -3,7 +3,7 @@
 .auth-container {
     width: 40%;
     margin: 0 auto;
-    margin-top: 4rem;
+    margin-top: 2rem;
     padding: 2rem;
 
     .auth-title {
@@ -25,5 +25,9 @@
             background-color: #0d6efd;
             transform: scale(1.03);
         }
+    }
+
+    .cancel-wrapper {
+        margin: 1.5rem 1rem;
     }
 }
