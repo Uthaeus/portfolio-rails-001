@@ -1,14 +1,21 @@
-<p style="color: green"><%= notice %></p>
 
-<h1>Blogs</h1>
+<div class='blog-index-container'>
 
-<div id="blogs">
-  <% @blogs.each do |blog| %>
-    <%= render blog %>
-    <p>
-      <%= link_to "Show this blog", blog %>
-    </p>
-  <% end %>
+  <div class='blog-index-header'>
+    <h1 class='blog-index-title'>My Blogs</h1>
+    <%= link_to "New blog", new_blog_path, class: 'new-blog-link' if logged_in?(:site_admin) %>
+  </div>
+
+  <div class='blog-index-content'>
+    <div id="blogs" class='index-list-wrapper'>
+      <% @blogs.each do |blog| %>
+        <%= render blog %>
+        <p>
+          <%= link_to "Show this blog", blog %>
+        </p>
+      <% end %>
+    </div>
+
+    <%# sidebar %>
+  </div>
 </div>
-
-<%= link_to "New blog", new_blog_path %>
