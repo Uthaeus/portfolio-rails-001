@@ -1,11 +1,14 @@
-<div id="<%= dom_id blog %>">
-  <p>
-    <strong>Title:</strong>
-    <%= blog.title %>
+<div id="<%= dom_id blog %>" class='blog-item'>
+
+  <p class='blog-item-title'>
+    <%= link_to blog.title.upcase, blog, class: 'blog-title-link' %>
   </p>
 
-  <p>
-    <strong>Body:</strong>
+  <p class="blog-item-date">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
+
+  <%# widget bar %>
+
+  <p class='mx-2'>
     <%= blog.body %>
   </p>
 

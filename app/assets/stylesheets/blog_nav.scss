@@ -2,9 +2,7 @@
 .blog-nav-container {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    height: 48px;
-    background-color: rgb(8, 112, 238);
-    color: white;
+    height: 56px;
     padding: 0 16px;
 
     .blog-nav-header {
@@ -45,16 +43,18 @@
     }
 
     .blog-nav-item {
-        margin: 0 16px;
+        margin: 0 20px;
+        font-size: 1.2em;
         font-weight: 500;
         text-decoration: none;
-        color: white;
+        color: rgb(71, 71, 74);
         border-bottom: 2px solid transparent;
-        transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out, transform 0.3s ease-in-out;
 
         &:hover {
             color: #606162;
             border-bottom: 2px solid #606162;
+            transform: scale(1.1);
         }
     }
 }

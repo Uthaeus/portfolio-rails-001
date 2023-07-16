@@ -2,17 +2,22 @@
 <div class='blog-index-container'>
 
   <div class='blog-index-header'>
-    <h1 class='blog-index-title'>My Blogs</h1>
-    <%= link_to "New blog", new_blog_path, class: 'new-blog-link' if logged_in?(:site_admin) %>
+    <div class='header-left'>
+      <h1 class='blog-index-title'>Welcome To The Jungle</h1>
+      
+    </div>
+
+    <div class='header-right'>
+      <%# featured blog %>
+    </div>
   </div>
 
   <div class='blog-index-content'>
     <div id="blogs" class='index-list-wrapper'>
+      <%= link_to "New blog", new_blog_path, class: 'new-blog-link' if logged_in?(:site_admin) %>
+
       <% @blogs.each do |blog| %>
         <%= render blog %>
-        <p>
-          <%= link_to "Show this blog", blog %>
-        </p>
       <% end %>
     </div>
 
