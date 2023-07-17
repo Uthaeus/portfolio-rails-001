@@ -7,24 +7,24 @@
 
     <div class='show-widget'>
       <div class='show-widget-left'>
-        <%= link_to "<< Back to blogs", blogs_path %> /
-        <p>Topic Link</p> /
-        <p>Created <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</p> 
+        <%= link_to "<< Back to blogs", blogs_path, class: 'widget-item widget-link widget-back' %> /
+        <%= link_to "Topic", blogs_path, class: 'widget-item widget-link widget-topic' %> /
+        <p class='widget-item widget-created-at'>Created <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago</p> 
       </div>
 
       <div class='show-widget-right'>
         <% if logged_in?(:site_admin) %>
-          <%= link_to "Edit this blog", edit_blog_path(@blog) %> |
-          <%= button_to "Destroy this blog", @blog, method: :delete %>
+          <%= link_to "Edit this blog", edit_blog_path(@blog), class: 'widget-item widget-link widget-edit' %> |
+          <%= button_to "Destroy this blog", @blog, method: :delete, class: 'widget-item widget-link widget-delete' %>
         <% end %>
       </div>
     </div>
 
     <div class='show-content'>
       <p class='show-body'><%= @blog.body %></p>
-
-        <%# comments %>
     </div>
+
+    <%# comments %>
   </div>
 
   <div class='show-container-right'>

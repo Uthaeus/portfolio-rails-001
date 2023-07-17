@@ -1,6 +1,8 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap';
 @import '../../../node_modules/bootstrap-icons/font/bootstrap-icons';
 
+@import 'variables';
+
 @import 'blog_nav';
 
 body {
@@ -40,7 +42,7 @@ body {
         width: 88%;
         height: 170px;
         margin: 1rem auto 4rem auto;
-        background-color: #01070e;
+        background-color: $portfolio-black;
         border-radius: 7px;
         display: grid;
         grid-template-columns: 3fr 2fr;
@@ -60,7 +62,7 @@ body {
             margin-left: 4rem;
             font-size: 2.5em;
             font-weight: 500;
-            color: rgb(230, 233, 234);
+            color: $portfolio-white;
         }
     }
 
@@ -93,14 +95,14 @@ body {
                 }
 
                 .blog-title-link {
-                    color: #1a4ea2;
+                    color: $portfolio-dark-blue;
                     text-decoration: none;
                     border-bottom: 1px solid transparent;
                     transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 
                     &:hover {
-                        color: #0d6efd;
-                        border-bottom: 1px solid #0d6efd;
+                        color: $portfolio-blue;
+                        border-bottom: 1px solid $portfolio-blue;
                     }
                 }
 
@@ -118,7 +120,7 @@ body {
 // Blog Show
 
 .blog-show-container {
-    padding: 2rem 3rem;
+    padding: 2rem 4rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
 
@@ -133,28 +135,78 @@ body {
             .show-title {
                 font-size: 2.5em;
                 font-weight: 600;
-                color: rgb(85, 38, 18);
+                color: $portfolio-dark-blue;
             }
         }
 
         .show-widget {
             width: 80%;
-            height: 45px;
-            margin: 0.5rem 0;
+            height: 42px;
+            margin: 1rem 0;
+            padding: 0 0.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
             border-radius: 4px;
             background-color: #d8d8d9;
+            box-shadow: 0 0 0.35rem rgba(0, 0, 0, 0.2);
 
             .show-widget-left {
                 display: flex;
                 align-items: center;
+                height: 100%;
             }
 
             .show-widget-right {
                 display: flex;
                 align-items: center;
+                height: 100%;
+            }
+
+            .widget-item {
+                font-size: 0.9em;
+                padding: 0 0.5rem;
+            }
+
+            .widget-link {
+                transition: opacity 0.3s ease-in-out;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+            .widget-back {
+                color: $portfolio-blue;
+            }
+
+            .widget-topic {
+                color: $portfolio-light-blue;
+            }
+
+            .widget-created-at {
+                margin: auto;
+            }
+
+            .widget-edit {
+                color: green;
+            }
+
+            .widget-delete {
+                color: red;
+                background-color: transparent;
+                border: none;
+            }
+        }
+
+        .show-content {
+            padding: 1rem 0.5rem;
+            border-bottom: 1px solid lightgray;
+
+            .show-body {
+                font-size: 1.1em;
+                line-height: 1.5;
+                color: #121212;
             }
         }
     }
