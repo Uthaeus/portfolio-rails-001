@@ -201,7 +201,6 @@ body {
 
         .show-content {
             padding: 1rem 0.5rem;
-            border-bottom: 1px solid lightgray;
 
             .show-body {
                 font-size: 1.1em;
@@ -214,5 +213,61 @@ body {
     .show-container-right {
         width: 96%;
         margin: 1rem auto;
+    }
+}
+
+// Blog Sidebar
+
+.blog-sidebar {
+    padding: 1rem 0.5rem;
+
+    .sidebar-title {
+        font-size: 1.5em;
+        font-weight: 400;
+        color: $portfolio-black;
+    }
+
+    .sidebar-header {
+        margin: 0.5rem 0;
+        padding-bottom: 0.5rem;
+
+        .sidebar-subtitle {
+            font-size: 0.9em;
+            font-weight: 300;
+            color: grey;
+            text-align: center;
+        }
+    }
+
+    .sidebar-topics {
+        margin: 0.5rem 0;
+
+        .topics-wrapper {
+            margin-left: 1rem;
+        }
+    }
+
+    .sidebar-socials {
+        margin: 0.5rem 0;
+
+        .socials-wrapper {
+            width: 40%;
+            margin-left: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .sidebar-social {
+                margin: 0.5rem 0;
+                text-align: center;
+                font-size: 2.4em;
+                color: grey;
+                transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+                &:hover {
+                    color: $portfolio-blue;
+                    transform: scale(1.1);
+                }
+            }
+        }
     }
 }
