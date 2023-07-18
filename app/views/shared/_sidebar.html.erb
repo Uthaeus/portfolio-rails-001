@@ -3,18 +3,19 @@
     <div class='sidebar-header'>
         <p class='sidebar-title'>About</p>
 
-        <p class='sidebar-subtitle'>explanation of some sort here</p>
+        <p class='sidebar-subtitle'>These are some of the topics I've been working on recently. I hope you find them interesting. Comments are live, so feel free to leave your thoughts.</p>
     </div>
 
     <div class='sidebar-topics'>
-        <p class='sidebar-title'>Topics</p>
+        <p class='sidebar-title'>
+            Topics 
+            <%= link_to 'all topics', topics_path, class: 'all-topics-link' %>
+        </p>
 
         <div class='topics-wrapper'>
-            <p>javascript</p>
-            <p>ruby</p>
-            <p>rails</p>
-            <p>react</p>
-            <p>redux</p>
+            <% @side_bar_topics.each do |topic| %>
+                <%= link_to topic.title, topic_path(topic), class: 'topic-link' %>
+            <% end %>
         </div>
     </div>
 
