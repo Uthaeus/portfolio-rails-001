@@ -296,6 +296,7 @@ body {
 
         .new-edit-link {
             color: $portfolio-blue;
+            padding: 0 0.5rem;
             transition: color 0.3s ease-in-out;
 
             &:hover {
@@ -306,3 +307,18 @@ body {
 }
 
 // Blog Form
+
+.blog-form-btn {
+    width: 33%;
+    font-size: 0.9em;
+    text-align: center;
+    background-color: $portfolio-blue;
+    color: $portfolio-white;
+    float: right;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $portfolio-light-blue;
+        transform: scale(1.03);
+    }
+}

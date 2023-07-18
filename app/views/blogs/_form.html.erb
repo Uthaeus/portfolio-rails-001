@@ -18,10 +18,10 @@
 
   <div class='form-group mb-3'>
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body, class: 'form-control' %>
+    <%= form.text_area :body, rows: 6, class: 'form-control' %>
   </div>
 
-  <div class='mb-2'>
-    <%= form.submit, 'Submit', class: 'btn btn-primary' %>
+  <div class='form-group mb-2'>
+    <%= form.submit 'Submit', class: 'blog-form-btn' %>
   </div>
 <% end %>
