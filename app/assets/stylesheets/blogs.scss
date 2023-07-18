@@ -186,13 +186,16 @@ body {
 
             .widget-created-at {
                 margin: auto;
+                color: grey;
             }
 
             .widget-edit {
+                font-size: 1.3em;
                 color: green;
             }
 
             .widget-delete {
+                font-size: 1.3em;
                 color: red;
                 background-color: transparent;
                 border: none;
@@ -219,7 +222,9 @@ body {
 // Blog Sidebar
 
 .blog-sidebar {
-    padding: 1rem 0.5rem;
+    width: 76%;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
 
     .sidebar-title {
         font-size: 1.5em;
@@ -251,7 +256,7 @@ body {
         margin: 0.5rem 0;
 
         .socials-wrapper {
-            width: 40%;
+            width: 60%;
             margin-left: 1.5rem;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -271,3 +276,33 @@ body {
         }
     }
 }
+
+// Blog new/edit
+
+.blog-new-edit-container {
+    width: 40%;
+    margin: 2rem auto;
+
+    .blog-new-edit-title {
+        font-size: 2.5em;
+        font-weight: 500;
+        color: $portfolio-dark-blue;
+    }
+
+    .blog-new-edit-actions {
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 0;
+
+        .new-edit-link {
+            color: $portfolio-blue;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+                color: $portfolio-light-blue;
+            }
+        }
+    }
+}
+
+// Blog Form
